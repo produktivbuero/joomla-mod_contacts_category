@@ -25,7 +25,7 @@ $show_country = $params->get('show_country', 1);
 <?php foreach ($list as $item) : ?>
   <li itemscope itemtype="https://schema.org/Place">
 
-    <?php if (!empty($item->image && $show_image)) : ?>
+    <?php if (!empty($item->image) && $show_image) : ?>
       <span class="contact-image">
         <?php if ($item_link) : ?><a href="<?php echo $item->link; ?>" itemprop="url"><?php endif; ?>
          <img src="<?php echo $item->image; ?>" alt="<?php echo $item->name; ?>" width="100" height="100">
@@ -34,7 +34,7 @@ $show_country = $params->get('show_country', 1);
       </span>
     <?php endif; ?>
 
-    <?php if ($show_name)) : ?>
+    <?php if ($show_name) : ?>
     <span class="contact-name" itemprop="name">
       <?php if ($item_link) : ?><a href="<?php echo $item->link; ?>" itemprop="url"><?php endif; ?>
         <?php echo $item->name; ?>
