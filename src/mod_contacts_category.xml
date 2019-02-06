@@ -40,7 +40,6 @@
 					extension="com_contact"
 					multiple="true"
 					label="JCATEGORIES"
-          required="true"
 					description="MOD_CONTACTS_CATEGORY_FIELD_CATEGORY_DESC"
 				/>
 
