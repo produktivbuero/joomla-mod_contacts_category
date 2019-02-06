@@ -20,10 +20,10 @@
 
   <!-- Language files -->
   <languages folder="language">
-    <language tag="de-DE">de-DE/de-DE.plg_system_pbanalytics.ini</language>
-    <language tag="de-DE">de-DE/de-DE.plg_system_pbanalytics.sys.ini</language>
-    <language tag="en-GB">en-GB/en-GB.plg_system_pbanalytics.ini</language>
-    <language tag="en-GB">en-GB/en-GB.plg_system_pbanalytics.sys.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_contacts_category.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_contacts_category.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_contacts_category.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_contacts_category.sys.ini</language>
   </languages>
 
   <!-- Update servers -->
