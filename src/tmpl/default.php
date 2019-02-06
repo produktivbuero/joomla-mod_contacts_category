@@ -13,6 +13,7 @@ defined('_JEXEC') or die;
 // Module parameters
 $item_link = $params->get('item_link', 1);
 $show_image = $params->get('show_image', 1);
+$show_name = $params->get('show_name', 1);
 $show_street_address = $params->get('show_street_address', 1);
 $show_suburb = $params->get('show_suburb', 1);
 $show_state = $params->get('show_state', 1);
@@ -33,11 +34,13 @@ $show_country = $params->get('show_country', 1);
       </span>
     <?php endif; ?>
 
+    <?php if ($show_name)) : ?>
     <span class="contact-name" itemprop="name">
       <?php if ($item_link) : ?><a href="<?php echo $item->link; ?>" itemprop="url"><?php endif; ?>
         <?php echo $item->name; ?>
       <?php if ($item_link) : ?></a><?php endif; ?>
     </span>
+    <?php endif; ?>
 
     <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
       <?php if (!empty($item->address) && $show_street_address) : ?>
