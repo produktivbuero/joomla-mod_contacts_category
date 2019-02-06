@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+  <name>MOD_CONTACTS_CATEGORY</name>
+  <creationDate>02/2019</creationDate>
+  <author>Sebastian Brümmer</author>
+  <authorEmail>sebastian@produktivbuero.de</authorEmail>
+  <authorUrl>https://www.produktivbuero.de</authorUrl>
+  <copyright>Copyright (C) 2019 *produktivbüro . All rights reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <version>0.9.0</version>
+  <description>MOD_CONTACTS_CATEGORY_XML_DESCRIPTION</description>
+
+  <!-- Module files -->
+	<files>
+		<filename module="mod_contacts_category">mod_contacts_category.php</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+
+  <!-- Language files -->
+  <languages folder="language">
+    <language tag="de-DE">de-DE/de-DE.plg_system_pbanalytics.ini</language>
+    <language tag="de-DE">de-DE/de-DE.plg_system_pbanalytics.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_system_pbanalytics.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_system_pbanalytics.sys.ini</language>
+  </languages>
+
+  <!-- Update servers -->
+  <updateservers>
+    <server type="extension" priority="1" name="MOD_CONTACTS_CATEGORY">https://raw.githubusercontent.com/produktivbuero/joomla-mod_contacts_category/master/updates.xml</server>
+  </updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="catid"
+					type="category"
+					extension="com_contact"
+					multiple="true"
+					label="JCATEGORIES"
+          required="true"
+					description="MOD_CONTACTS_CATEGORY_FIELD_CATEGORY_DESC"
+				/>
+
+				<field
+						name="featured"
+						type="radio"
+						default="0"
+						label="MOD_CONTACTS_CATEGORY_FIELD_FEATURED_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_FEATURED_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JALL</option>
+        </field>
+
+				<field
+					name="count"
+					type="number"
+					default="0"
+					step="1"
+					label="MOD_CONTACTS_CATEGORY_FIELD_COUNT_LABEL"
+					description="MOD_CONTACTS_CATEGORY_FIELD_COUNT_DESC"
+				/>
+
+				<field
+						name="ordering"
+						type="list"
+						default="ordering"
+						label="MOD_CONTACTS_CATEGORY_FIELD_ORDERING_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_ORDERING_DESC">
+					<option value="ordering">MOD_CONTACTS_CATEGORY_FIELD_ORDERING_ORDERING</option>
+					<option value="name">MOD_CONTACTS_CATEGORY_FIELD_ORDERING_NAME</option>
+					<option value="created">MOD_CONTACTS_CATEGORY_FIELD_ORDERING_CREATED</option>
+					<option value="publish_up">MOD_CONTACTS_CATEGORY_FIELD_ORDERING_PUBLISH</option>
+					<option	value="rand()">MOD_CONTACTS_CATEGORY_FIELD_ORDERING_RANDOM</option>
+				</field>
+
+				<field
+						name="direction"
+						type="radio"
+						default="ASC"
+						label="MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_DESC"
+            class="btn-group">
+					<option value="ASC">MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_ASC</option>
+					<option value="DESC">MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_DESC</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="DISPLAY">
+				<field
+						name="item_link"
+						type="radio"
+						default="1"
+						label="MOD_CONTACTS_CATEGORY_FIELD_LINK_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_LINK_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+				<field
+						name="show_image"
+						type="radio"
+						default="1"
+						label="MOD_CONTACTS_CATEGORY_FIELD_IMAGE_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_IMAGE_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+
+				<field
+						name="show_street_address"
+						type="radio"
+						default="1"
+						label="MOD_CONTACTS_CATEGORY_FIELD_STREET_ADDRESS_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_STREET_ADDRESS_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+
+				<field
+						name="show_suburb"
+						type="radio"
+						default="1"
+						label="MOD_CONTACTS_CATEGORY_FIELD_SUBURB_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_SUBURB_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+
+				<field
+						name="show_state"
+						type="radio"
+						default="1"
+						label="MOD_CONTACTS_CATEGORY_FIELD_STATE_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_STATE_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+
+				<field
+						name="show_postcode"
+						type="radio"
+						default="1"
+						label="MOD_CONTACTS_CATEGORY_FIELD_POSTCODE_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_POSTCODE_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+
+				<field
+						name="show_country"
+						type="radio"
+						default="1"
+						label="MOD_CONTACTS_CATEGORY_FIELD_COUNTRY_LABEL"
+						description="MOD_CONTACTS_CATEGORY_FIELD_COUNTRY_DESC"
+            class="btn-group btn-group-yesno">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+						name="moduleclass_sfx"
+						type="text"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
