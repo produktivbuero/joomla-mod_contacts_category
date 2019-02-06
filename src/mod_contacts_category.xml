@@ -82,7 +82,8 @@
 						default="ASC"
 						label="MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_LABEL"
 						description="MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_DESC"
-            class="btn-group">
+            class="btn-group"
+            showon="ordering!:rand()">
 					<option value="ASC">MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_ASC</option>
 					<option value="DESC">MOD_CONTACTS_CATEGORY_FIELD_DIRECTION_DESC</option>
 				</field>
