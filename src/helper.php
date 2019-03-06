@@ -51,9 +51,8 @@ abstract class modContactsCategoryHelper
     $contacts->setState('filter.publish_date', true);
     $contacts->setState('filter.language', true);
 
-    // Access filter
+    // Access filter (do not remove due to routing)
     $access     = !JComponentHelper::getParams('com_content')->get('show_noauth');
-    $authorised = JAccess::getAuthorisedViewLevels(JFactory::getUser()->get('id'));
     $contacts->setState('filter.access', $access);
 
     // Set count
@@ -82,15 +81,13 @@ abstract class modContactsCategoryHelper
     {
       $item->slug = $item->id . ':' . $item->alias;
       
-      if ($access || in_array($item->access, $authorised))
-      {
-        // We know that user has the privilege to view the article
-        $item->link = JRoute::_(ContactHelperRoute::getContactRoute($item->slug, $item->catid, $item->language));
-      }
-      else
-      {
-        $item->link = JRoute::_('index.php?option=com_users&view=login');
-      }
+      // Find menu itemid
+      $value = $featured ? 'index.php?option=com_contact&view=featured' : ContactHelperRoute::getCategoryRoute($item->catid);
+      $menuItem = $app->getMenu()->getItems( 'link', $value, true );
+      $itemId = empty($menuItem) ? 0 : $menuItem->id;
+
+      // We know that we have access (see "Access filter")
+      $item->link = JRoute::_( ContactHelperRoute::getContactRoute($item->slug, $item->catid).'&Itemid='.$itemId );
     }
 
     return $items;
