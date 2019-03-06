@@ -17,4 +17,22 @@
     <maintainerurl>https://www.produktivbuero.de</maintainerurl>
     <targetplatform name="joomla" version="3.*"/>
   </update>
+<updates>
+  <update>
+    <name>Contacts - Category</name>
+    <element>mod_contacts_category</element>
+    <type>module</type>
+    <client>site</client>
+    <version>0.9.1</version>
+    <infourl title="Release Notes">https://github.com/produktivbuero/joomla-mod_contacts_category/releases/tag/v0.9.1</infourl>
+    <downloads>
+      <downloadurl type="full" format="zip">https://github.com/produktivbuero/joomla-mod_contacts_category/releases/download/v0.9.1/mod_contacts_category-v0.9.1.zip</downloadurl>
+    </downloads>
+    <tags>
+      <tag>rc</tag>
+    </tags>
+    <maintainer>Sebastian Brümmer</maintainer>
+    <maintainerurl>https://www.produktivbuero.de</maintainerurl>
+    <targetplatform name="joomla" version="3.*"/>
+  </update>
 </updates>
