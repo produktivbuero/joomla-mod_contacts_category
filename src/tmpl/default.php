@@ -11,26 +11,22 @@
 defined('_JEXEC') or die;
 
 // Module parameters
-$item_link = $params->get('item_link', 1);
-$show_image = $params->get('show_image', 1);
 $show_name = $params->get('show_name', 1);
-$show_position = $params->get('show_position', 1);
+$item_link = $params->get('item_link', 1);
+$show_image = $params->get('show_image', 0);
+$show_position = $params->get('show_position', 0);
+$show_email_to = $params->get('show_email_to', 1);
+$link_email_to = $params->get('link_email_to', 1);
+$text_email_to = $params->get('text_email_to', '');
 $show_street_address = $params->get('show_street_address', 1);
 $show_suburb = $params->get('show_suburb', 1);
 $show_state = $params->get('show_state', 1);
 $show_postcode = $params->get('show_postcode', 1);
-$show_country = $params->get('show_country', 1);
-
-$show_telephone = $params->get('show_telephone', 1);
-$show_mobile = $params->get('show_mobile', 1);
-$show_fax = $params->get('show_fax', 1);
-$show_email_to = $params->get('show_email_to', 1);
-$link_email_to = $params->get('link_email_to', 1);
-$text_email_to = $params->get('text_email_to', '');
-$show_telephone = $params->get('show_telephone', 1);
-$show_mobile = $params->get('show_mobile', 1);
-$show_fax = $params->get('show_fax', 1);
-$show_webpage = $params->get('show_webpage', 1);
+$show_country = $params->get('show_country', 0);
+$show_telephone = $params->get('show_telephone', 0);
+$show_mobile = $params->get('show_mobile', 0);
+$show_fax = $params->get('show_fax', 0);
+$show_webpage = $params->get('show_webpage', 0);
 $link_webpage = $params->get('link_webpage', 1);
 
 $symbols = $params->get('symbols', 0);

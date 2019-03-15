@@ -110,7 +110,7 @@
 				<field
 						name="show_image"
 						type="radio"
-						default="1"
+						default="0"
 						label="MOD_CONTACTS_CATEGORY_FIELD_IMAGE_LABEL"
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
@@ -120,7 +120,7 @@
         <field
             name="show_position"
             type="radio"
-            default="1"
+            default="0"
             label="MOD_CONTACTS_CATEGORY_FIELD_POSITION_LABEL"
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
@@ -198,7 +198,7 @@
         <field
             name="show_country"
             type="radio"
-            default="1"
+            default="0"
             label="MOD_CONTACTS_CATEGORY_FIELD_COUNTRY_LABEL"
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
@@ -208,7 +208,7 @@
         <field
             name="show_telephone"
             type="radio"
-            default="1"
+            default="0"
             label="MOD_CONTACTS_CATEGORY_FIELD_TELEPHONE_LABEL"
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
@@ -218,7 +218,7 @@
         <field
             name="show_mobile"
             type="radio"
-            default="1"
+            default="0"
             label="MOD_CONTACTS_CATEGORY_FIELD_MOBILE_LABEL"
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
@@ -228,7 +228,7 @@
         <field
             name="show_fax"
             type="radio"
-            default="1"
+            default="0"
             label="MOD_CONTACTS_CATEGORY_FIELD_FAX_LABEL"
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
@@ -238,7 +238,7 @@
         <field
             name="show_webpage"
             type="radio"
-            default="1"
+            default="0"
             label="MOD_CONTACTS_CATEGORY_FIELD_WEBPAGE_LABEL"
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
