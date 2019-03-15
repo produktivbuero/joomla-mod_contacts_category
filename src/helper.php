@@ -92,4 +92,48 @@ abstract class modContactsCategoryHelper
 
     return $items;
   }
+
+
+  /**
+   * Get a symbol or text of contact information
+   *
+   * @param   int     $symbol  symbol (0) or text (1)
+   * @param   string  $type  type of symbol
+   *
+   * @return  string
+   *
+   * @since  0.9.2
+   */
+  public static function getSymbol($symbol, $type)
+  {
+    $return = '';
+
+    // load language files
+    JFactory::getLanguage()->load('mod_contacts_category', JPATH_SITE.'/modules/mod_contacts_category');
+
+    switch ($type)
+    {
+      case 'email':
+          $return = $symbol == 0 ? '<span class="icon-mail"></span> ' : JText::_('MOD_CONTACTS_CATEGORY_EMAIL');
+        break;
+
+      case 'telephone':
+          $return = $symbol == 0 ? '<span class="icon-phone"></span> ' : JText::_('MOD_CONTACTS_CATEGORY_TELEPHONE');
+        break;
+
+      case 'mobile':
+          $return = $symbol == 0 ? '<span class="icon-mobile"></span> ' : JText::_('MOD_CONTACTS_CATEGORY_MOBILE');
+        break;
+
+      case 'fax':
+          $return = $symbol == 0 ? '<span class="icon-print"></span> ' : JText::_('MOD_CONTACTS_CATEGORY_FAX');
+        break;
+
+      case 'webpage':
+          $return = $symbol == 0 ? '<span class="icon-new-tab"></span> ' : JText::_('MOD_CONTACTS_CATEGORY_WEBPAGE');
+        break;
+    }
+
+    return $return;
+  }
 }

@@ -278,6 +278,19 @@
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>
+
+        <field type="spacer" name="spacer" hr="true" />
+
+        <field
+            name="symbols"
+            type="list"
+            default="0"
+            label="MOD_CONTACTS_CATEGORY_FIELD_VIEW_LABEL"
+            description="MOD_CONTACTS_CATEGORY_FIELD_VIEW_DESC">
+          <option value="0">MOD_CONTACTS_CATEGORY_FIELD_VIEW_SYMBOLS</option>
+          <option value="1">MOD_CONTACTS_CATEGORY_FIELD_VIEW_TEXT</option>
+          <option value="2">MOD_CONTACTS_CATEGORY_FIELD_VIEW_NONE</option>
+        </field>
 			</fieldset>
 
 			<fieldset name="advanced">

@@ -31,6 +31,8 @@ $show_mobile = $params->get('show_mobile', 1);
 $show_fax = $params->get('show_fax', 1);
 $show_webpage = $params->get('show_webpage', 1);
 $link_webpage = $params->get('link_webpage', 1);
+
+$symbols = $params->get('symbols', 0);
 ?>
 
 <ul class="contact-category<?php echo $moduleclass_sfx; ?> mod-list category list-striped">
@@ -97,8 +99,9 @@ $link_webpage = $params->get('link_webpage', 1);
       <?php endif; ?>
     </span>
 
-    <?php if ($show_email_to) : ?>
+    <?php if (!empty($item->email_to) && $show_email_to) : ?>
       <span class="contact-mail" itemprop="email">
+        <?php if ($symbols != 2) echo modContactsCategoryHelper::getSymbol($symbols, 'email', $item->email_to); ?>
         <?php
           if ($link_email_to) echo JHtml::_('email.cloak', $item->email_to);
           else echo $item->email_to;
@@ -106,26 +109,30 @@ $link_webpage = $params->get('link_webpage', 1);
       </span>
     <?php endif; ?>
 
-    <?php if ($show_telephone) : ?>
+    <?php if (!empty($item->telephone) && $show_telephone) : ?>
       <span class="contact-telephone" itemprop="telephone">
+        <?php if ($symbols != 2) echo modContactsCategoryHelper::getSymbol($symbols, 'telephone', $item->telephone); ?>
         <?php echo $item->telephone; ?>
       </span>
     <?php endif; ?>
 
-    <?php if ($show_mobile) : ?>
+    <?php if (!empty($item->mobile) && $show_mobile) : ?>
       <span class="contact-mobile" itemprop="telephone">
+        <?php if ($symbols != 2) echo modContactsCategoryHelper::getSymbol($symbols, 'mobile', $item->mobile); ?>
         <?php echo $item->mobile; ?>
       </span>
     <?php endif; ?>
 
-    <?php if ($show_fax) : ?>
+    <?php if (!empty($item->fax) && $show_fax) : ?>
       <span class="contact-fax" itemprop="faxNumber">
+        <?php if ($symbols != 2) echo modContactsCategoryHelper::getSymbol($symbols, 'fax', $item->fax); ?>
         <?php echo $item->fax; ?>
       </span>
     <?php endif; ?>
 
-    <?php if ($show_webpage) : ?>
+    <?php if (!empty($item->webpage) && $show_webpage) : ?>
       <span class="contact-webpage">
+        <?php if ($symbols != 2) echo modContactsCategoryHelper::getSymbol($symbols, 'webpage', $item->webpage); ?>
         <?php if ($link_webpage) : ?><a href="<?php echo $item->webpage; ?>" target_="_blank"><?php endif; ?>
         <?php echo $item->webpage; ?>
         <?php if ($link_webpage) : ?></a><?php endif; ?>
