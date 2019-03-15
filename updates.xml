@@ -17,7 +17,6 @@
     <maintainerurl>https://www.produktivbuero.de</maintainerurl>
     <targetplatform name="joomla" version="3.*"/>
   </update>
-<updates>
   <update>
     <name>Contacts - Category</name>
     <element>mod_contacts_category</element>
