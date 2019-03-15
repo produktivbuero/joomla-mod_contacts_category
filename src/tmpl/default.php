@@ -26,6 +26,7 @@ $show_mobile = $params->get('show_mobile', 1);
 $show_fax = $params->get('show_fax', 1);
 $show_email_to = $params->get('show_email_to', 1);
 $link_email_to = $params->get('link_email_to', 1);
+$text_email_to = $params->get('text_email_to', '');
 $show_telephone = $params->get('show_telephone', 1);
 $show_mobile = $params->get('show_mobile', 1);
 $show_fax = $params->get('show_fax', 1);
@@ -103,7 +104,7 @@ $symbols = $params->get('symbols', 0);
       <span class="contact-mail" itemprop="email">
         <?php if ($symbols != 2) echo modContactsCategoryHelper::getSymbol($symbols, 'email', $item->email_to); ?>
         <?php
-          if ($link_email_to) echo JHtml::_('email.cloak', $item->email_to);
+          if ($link_email_to) echo JHtml::_('email.cloak', $item->email_to, 1, $text_email_to, 0);
           else echo $item->email_to;
         ?>
       </span>

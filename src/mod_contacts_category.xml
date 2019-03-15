@@ -168,6 +168,13 @@
           <option value="0">JNO</option>
         </field>
 
+        <field
+            name="text_email_to"
+            type="text"
+            showon="show_email_to:1"
+            label="MOD_CONTACTS_CATEGORY_FIELD_EMAIL_TEXT_LABEL"
+            description="MOD_CONTACTS_CATEGORY_FIELD_EMAIL_TEXT_DESC" />
+
 				<field
 						name="show_street_address"
 						type="radio"
