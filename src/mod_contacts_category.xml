@@ -86,16 +86,6 @@
 			</fieldset>
 
 			<fieldset name="DISPLAY">
-				<field
-						name="item_link"
-						type="radio"
-						default="1"
-						label="MOD_CONTACTS_CATEGORY_FIELD_LINK_LABEL"
-            class="btn-group btn-group-yesno">
-          <option value="1">JYES</option>
-          <option value="0">JNO</option>
-        </field>
-
         <field
             name="show_name"
             type="radio"
@@ -104,6 +94,17 @@
             class="btn-group btn-group-yesno">
           <option value="1">JSHOW</option>
           <option value="0">JHIDE</option>
+        </field>
+
+        <field
+            name="item_link"
+            type="radio"
+            default="1"
+            showon="show_name:1"
+            label="MOD_CONTACTS_CATEGORY_FIELD_LINK_LABEL"
+            class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
         </field>
 
         <field
