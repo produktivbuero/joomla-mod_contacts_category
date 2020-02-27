@@ -55,10 +55,6 @@ abstract class modContactsCategoryHelper
     $access     = !JComponentHelper::getParams('com_content')->get('show_noauth');
     $contacts->setState('filter.access', $access);
 
-    // Set count
-    $contacts->setState('list.start', 0);
-    $contacts->setState('list.limit', (int) $params->get('count', 0));
-
     // Set ordering
     $ordering = $params->get('ordering', 'ordering');
     $contacts->setState('list.ordering', $ordering);
@@ -74,6 +70,13 @@ abstract class modContactsCategoryHelper
     if ( is_array($categories) )
     {
       $items = array_filter($items, function ($item) use ($categories) { return in_array($item->catid, $categories); });
+    }
+
+    // Limit
+    $count = (int) $params->get('count', 0);
+    if ( $count > 0 )
+    {
+      $items = array_slice($items, 0, $count);
     }
 
     // Add routing
